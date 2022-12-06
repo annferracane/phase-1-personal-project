@@ -1,0 +1,6 @@
+const configObj = {
+    {
+       
+    }
+}
+fetch()

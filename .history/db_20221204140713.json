@@ -1,0 +1,18 @@
+{
+    "jokes": [
+      {
+        "id": 1,
+        "name": "Ghostbusters",
+        "manufacturer_name": "Stern",
+        "image": "https://img.opdb.org/f9e30b06-93e0-4870-8c25-efd0bd7f9d3e-large.jpg",
+        "high_score": 0
+      },
+      {
+        "id": 2,
+        "name": "Ghostbusters",
+        "manufacturer_name": "Stern",
+        "image": "https://img.opdb.org/f9e30b06-93e0-4870-8c25-efd0bd7f9d3e-large.jpg",
+        "high_score": 0
+      }
+    ]
+  }
