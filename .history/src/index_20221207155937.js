@@ -1,7 +1,6 @@
 // DOM Global Variables
-const localUrlBase = 'http://localhost:3000/jokes';
 const jokeCardsDiv = document.querySelector('#joke-cards-div');
-
+const localUrlBase = 'http://localhost:3000/jokes';
 
 // DOM Content Updates
 document.querySelector('#hero-header').textContent = 'Get ready for jokes.';
@@ -17,7 +16,6 @@ fetch(localUrlBase)
 .then(resp => resp.json())
 .then(jokeData => displayJokes(jokeData))
 .catch(error => console.log(`Error with local db: ${error}`));
-
 
 // Display jokes on web app
 function displayJokes(jokeData) {
@@ -72,21 +70,23 @@ function displayJokes(jokeData) {
 
 }
 
-//refreshJokesHandler();
+refreshJokesHandler();
 
 function refreshJokesHandler() {
     // Delete jokes in db.json
     fetch(localUrlBase)
     .then(resp => resp.json())
-    .then(jokeData => deleteJokeFromDatabase(jokeData))
+    .then(jokeData => deleteJokeFromDatabase(jokeData.jokes))
     .catch(error => console.log(`Error with local db in refresh handler: ${error}`));
     
 
     // Call fetch to Joke API to refresh
+    /*
     fetch('https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&amount=20')
     .then(resp => resp.json())
     .then(jokeAPIData => addJokeToDatabase(jokeAPIData.jokes))
     .catch(error => console.log(`Error with joke API: ${error}`));
+    */
 }
 
 function deleteJokeFromDatabase(jokeData) {

@@ -1,8 +1,3 @@
-// DOM Global Variables
-const localUrlBase = 'http://localhost:3000/jokes';
-const jokeCardsDiv = document.querySelector('#joke-cards-div');
-
-
 // DOM Content Updates
 document.querySelector('#hero-header').textContent = 'Get ready for jokes.';
 document.querySelector('#hero-content').textContent = 
@@ -12,12 +7,16 @@ truthfully, several may not be initially understood; but that's the
 point here at the Funny, Punny Programmer -- you're in charge. 
 You tell us what gets a laugh, and what should be tossed!`;
 
+// DOM Global Variables
+const jokeCardsDiv = document.querySelector('#joke-cards-div');
+const baseUrlJson
+
+
 // Fetch jokes from local db.json and call display function
-fetch(localUrlBase)
+fetch('http://localhost:3000/jokes')
 .then(resp => resp.json())
 .then(jokeData => displayJokes(jokeData))
 .catch(error => console.log(`Error with local db: ${error}`));
-
 
 // Display jokes on web app
 function displayJokes(jokeData) {
@@ -76,10 +75,10 @@ function displayJokes(jokeData) {
 
 function refreshJokesHandler() {
     // Delete jokes in db.json
-    fetch(localUrlBase)
+    fetch('http://localhost:3000/jokes')
     .then(resp => resp.json())
-    .then(jokeData => deleteJokeFromDatabase(jokeData))
-    .catch(error => console.log(`Error with local db in refresh handler: ${error}`));
+    .then(jokeData => deleteJokeFromDatabase(jokeData.jokes))
+    .catch(error => console.log(`Error with local db: ${error}`));
     
 
     // Call fetch to Joke API to refresh
@@ -91,17 +90,9 @@ function refreshJokesHandler() {
 
 function deleteJokeFromDatabase(jokeData) {
     jokeData.forEach(joke => {
-        // Build fetch url for delete
-        const fetchURL = `${localUrlBase}/${joke.id}`;
-        // Delete from db.json
-        fetch(fetchURL, {
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            method: 'DELETE'
-        })
+        const fetchURL = 
     })
+
 }
 
 // Function that 
@@ -113,7 +104,7 @@ function addJokeToDatabase(jokeAPIData) {
         if(jokeAPI.type == 'single') {
             joke = jokeAPI.joke;
         } else if (jokeAPI.type == 'twopart') {
-            joke = `<b>Setup:</b> ${jokeAPI.setup}<br><br><b>Delivery:</b> ${jokeAPI.delivery}`; 
+            joke = `Setup: ${jokeAPI.setup}<br>Delivery: ${jokeAPI.delivery}`; 
         } else {
             console.log('Unable to display joke content.');
         };
@@ -128,7 +119,7 @@ function addJokeToDatabase(jokeAPIData) {
         }
 
         // Post jokes to db.json
-        fetch(localUrlBase, {
+        fetch('http://localhost:3000/jokes', {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'

@@ -13,11 +13,12 @@ point here at the Funny, Punny Programmer -- you're in charge.
 You tell us what gets a laugh, and what should be tossed!`;
 
 // Fetch jokes from local db.json and call display function
+/*
 fetch(localUrlBase)
 .then(resp => resp.json())
 .then(jokeData => displayJokes(jokeData))
 .catch(error => console.log(`Error with local db: ${error}`));
-
+*/
 
 // Display jokes on web app
 function displayJokes(jokeData) {
@@ -72,7 +73,7 @@ function displayJokes(jokeData) {
 
 }
 
-//refreshJokesHandler();
+refreshJokesHandler();
 
 function refreshJokesHandler() {
     // Delete jokes in db.json

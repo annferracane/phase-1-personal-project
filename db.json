@@ -3,81 +3,81 @@
     {
       "category": "Programming",
       "type": "single",
-      "idJokeAPI": 38,
+      "idJokeAPI": 123,
       "language": "en",
-      "joke": "A man is smoking a cigarette and blowing smoke rings into the air. His girlfriend becomes irritated with the smoke and says \"Can't you see the warning on the cigarette pack? Smoking is hazardous to your health!\" to which the man replies, \"I am a programmer.  We don't worry about warnings; we only worry about errors.\"",
+      "joke": "The six stages of debugging:\n1. That can't happen.\n2. That doesn't happen on my machine.\n3. That shouldn't happen.\n4. Why does that happen?\n5. Oh, I see.\n6. How did that ever work?",
       "id": 1
     },
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 14,
+      "idJokeAPI": 32,
       "language": "en",
-      "joke": "Setup: What do you call a developer who doesn't comment code?<br>Delivery: A developer.",
+      "joke": "<b>Setup:</b> What is the best prefix for global variables?<br><br><b>Delivery:</b> //",
       "id": 2
     },
     {
       "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 13,
+      "type": "single",
+      "idJokeAPI": 3,
       "language": "en",
-      "joke": "Setup: Why does no one like SQLrillex?<br>Delivery: He keeps dropping the database.",
+      "joke": "A programmer puts two glasses on his bedside table before going to sleep.\nA full one, in case he gets thirsty, and an empty one, in case he doesn't.",
       "id": 3
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 132,
+      "type": "twopart",
+      "idJokeAPI": 15,
       "language": "en",
-      "joke": "Four engineers get into a car. The car won't start.\nThe Mechanical engineer says \"It's a broken starter\".\nThe Electrical engineer says \"Dead battery\".\nThe Chemical engineer says \"Impurities in the gasoline\".\nThe IT engineer says \"Hey guys, I have an idea: How about we all get out of the car and get back in\".",
+      "joke": "<b>Setup:</b> Why did the Python programmer not respond to the foreign mails he got?<br><br><b>Delivery:</b> Because his interpreter was busy collecting garbage.",
       "id": 4
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 40,
+      "type": "twopart",
+      "idJokeAPI": 46,
       "language": "en",
-      "joke": "Debugging: Removing the needles from the haystack.",
+      "joke": "<b>Setup:</b> What's the object-oriented way to become wealthy?<br><br><b>Delivery:</b> Inheritance.",
       "id": 5
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 27,
+      "type": "twopart",
+      "idJokeAPI": 264,
       "language": "en",
-      "joke": "Java is like Alzheimer's, it starts off slow, but eventually, your memory is gone.",
+      "joke": "<b>Setup:</b> Why are Assembly programmers always soaking wet?<br><br><b>Delivery:</b> They work below C-level.",
       "id": 6
     },
     {
       "category": "Programming",
       "type": "single",
-      "idJokeAPI": 44,
+      "idJokeAPI": 180,
       "language": "en",
-      "joke": "Have a great weekend!\nI hope your code behaves the same on Monday as it did on Friday.",
+      "joke": "Knock knock.\nWho's there?\nRecursion.\nRecursion who?\nKnock knock.",
       "id": 7
     },
     {
       "category": "Programming",
       "type": "single",
-      "idJokeAPI": 42,
+      "idJokeAPI": 301,
       "language": "en",
-      "joke": "Debugging is like being the detective in a crime movie where you're also the murderer at the same time.",
+      "joke": "I have a joke about Stack Overflow, but you would say it's a duplicate.",
       "id": 8
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 51,
+      "type": "twopart",
+      "idJokeAPI": 232,
       "language": "en",
-      "joke": "Algorithm: A word used by programmers when they don't want to explain how their code works.",
+      "joke": "<b>Setup:</b> Why do programmers prefer using the dark mode?<br><br><b>Delivery:</b> Because light attracts bugs.",
       "id": 9
     },
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 48,
+      "idJokeAPI": 53,
       "language": "en",
-      "joke": "Setup: Why did the functional programmer get thrown out of school?<br>Delivery: Because he refused to take classes.",
+      "joke": "<b>Setup:</b> Why do Java programmers hate communism?<br><br><b>Delivery:</b> They don't want to live in a classless society.",
       "id": 10
     }
   ]
