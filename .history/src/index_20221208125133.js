@@ -3,7 +3,7 @@ const localUrlBase = 'http://localhost:3000/jokes';
 const jokeCardsDiv = document.querySelector('#joke-cards-div');
 const deleteJokesBtn = document.querySelector('#delete-jokes-btn');
 const refreshJokesBtn = document.querySelector('#refresh-jokes-btn');
-const searchForm = document.querySelector('#joke-search');
+const searchInput = document.querySelector('#joke-search');
 
 deleteJokesBtn.addEventListener('click', deleteJokesHandler);
 refreshJokesBtn.addEventListener('click', refreshJokesHandler);
@@ -215,8 +215,9 @@ function generalFetch(url, mthd, configObj, handler) {
 }
 
 function searchJokeHandler(e) {
-    e.preventDefault();
-    console.log(e.target.querySelector('#joke-search-input').value);
+    console.log(e);
+    console.log("hello");
+
 }
 
 function searchJokes(jokeData) {

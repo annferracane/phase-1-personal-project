@@ -217,6 +217,8 @@ function generalFetch(url, mthd, configObj, handler) {
 function searchJokeHandler(e) {
     e.preventDefault();
     console.log(e.target.querySelector('#joke-search-input').value);
+    console.log("hello");
+
 }
 
 function searchJokes(jokeData) {

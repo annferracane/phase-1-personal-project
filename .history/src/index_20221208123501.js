@@ -3,11 +3,11 @@ const localUrlBase = 'http://localhost:3000/jokes';
 const jokeCardsDiv = document.querySelector('#joke-cards-div');
 const deleteJokesBtn = document.querySelector('#delete-jokes-btn');
 const refreshJokesBtn = document.querySelector('#refresh-jokes-btn');
-const searchForm = document.querySelector('#joke-search');
+const searchInput = document.querySelector('#joke-search');
 
 deleteJokesBtn.addEventListener('click', deleteJokesHandler);
 refreshJokesBtn.addEventListener('click', refreshJokesHandler);
-searchForm.addEventListener('submit', e => searchJokeHandler(e));
+searchInput.addEventListener('search', e => searchJokeHandler(e));
 
 // DOM Content Updates
 document.querySelector('#hero-header').textContent = 'Get ready for jokes.';
@@ -214,14 +214,8 @@ function generalFetch(url, mthd, configObj, handler) {
     .catch(error => console.log(`Error in ${handler}(): ${error}`));
 }
 
-function searchJokeHandler(e) {
-    e.preventDefault();
-    console.log(e.target.querySelector('#joke-search-input').value);
-}
-
-function searchJokes(jokeData) {
-    return jokeData;
-}
+function searchJokeHandler() {
+    console.log(searchInput.value);
 
     //const searchStr = searchInput.value;
 
@@ -234,6 +228,11 @@ function searchJokes(jokeData) {
     .then(searchedJokeData => createJokeToDisplay(searchedJokeData))
     .catch(error => console.log(`Error with local db: ${error}`));
     */
+}
+
+function searchJokes(jokeData) {
+    return jokeData;
+}
 
 
 
