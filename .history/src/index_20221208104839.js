@@ -173,7 +173,6 @@ function upvoteHandler(e) {
 }
 
 function downvoteHandler(e) {
-    console.log('downvote');
     console.log(e.target.id);
 
 }

@@ -167,16 +167,11 @@ function refreshJokesHandler() {
 }
 
 function upvoteHandler(e) {
-    console.log('upvote');
     console.log(e.target.id);
 
-}
 
-function downvoteHandler(e) {
-    console.log('downvote');
-    console.log(e.target.id);
-
-}
+    
+    
 
 
 

@@ -50,18 +50,14 @@ function createJokeToDisplay(jokeData) {
         // Build upvote button
         const upvoteBtn = document.createElement('button');
         upvoteBtn.type = 'button';
-        upvoteBtn.id = `upvote-${joke.id}`;
         upvoteBtn.className = 'btn btn-outline-primary';
         upvoteBtn.textContent = 'upvote ↑';
-        upvoteBtn.addEventListener('click', e => upvoteHandler(e));
 
         // Build downvote button
         const downvoteBtn = document.createElement('button');
         downvoteBtn.type = 'button';
-        downvoteBtn.id = `downvote-${joke.id}`;
         downvoteBtn.className = 'btn btn-outline-danger';
         downvoteBtn.textContent = 'downvote ↓';
-        downvoteBtn.addEventListener('click', e => downvoteHandler(e));
 
         // Build button divider
         const divBtnDivider = document.createElement('div');
@@ -105,7 +101,22 @@ function deleteJokesHandler() {
     .catch(error => console.log(`Error with local db in refresh handler: ${error}`));
 }
 
-function fetchJokes(postCallback, displayCallback) {
+// Post joke to database
+function addJokeToDatabase(jokeConfigObj) {
+    // Post to local db.json
+    fetch(localUrlBase, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(jokeConfigObj)
+    })
+    .then(resp => console.log(resp.json()))
+    .catch(error => console.log(`Error in addJokeToDatabase(): ${error}`));
+}
+
+async function fetchJokes(postCallback, displayCallback) {
     // Call fetch to Joke API to refresh
     fetch('https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&amount=10')
     .then(resp => resp.json())
@@ -127,7 +138,6 @@ function fetchJokes(postCallback, displayCallback) {
                 type: jokeAPI.type,
                 idJokeAPI: jokeAPI.id,
                 language: jokeAPI.lang,
-                votes: 0,
                 joke: joke
             } 
 
@@ -143,8 +153,11 @@ function fetchJokes(postCallback, displayCallback) {
 }
 
 
-function postJokesToDatabase(newJokesFromAPI, displayCallback) {
-    // Loop through joke array and post to local db
+async function postJokesToDatabase(newJokesFromAPI, displayCallback) {
+    // Post to local db.json
+    console.log(newJokesFromAPI);
+    console.log(newJokesFromAPI.length);
+
     newJokesFromAPI.forEach(newJoke => {
         console.log(newJoke);
         fetch(localUrlBase, {
@@ -158,24 +171,11 @@ function postJokesToDatabase(newJokesFromAPI, displayCallback) {
         .catch(error => console.log(`Error in postJokesToDatabase(): ${error}`));
     }); 
 
-    // Call displayJokes() as a callback
     displayCallback();
 }
 
 function refreshJokesHandler() {
     fetchJokes(postJokesToDatabase, displayJokes);
-}
-
-function upvoteHandler(e) {
-    console.log('upvote');
-    console.log(e.target.id);
-
-}
-
-function downvoteHandler(e) {
-    console.log('downvote');
-    console.log(e.target.id);
-
 }
 
 

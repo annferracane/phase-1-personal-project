@@ -50,18 +50,15 @@ function createJokeToDisplay(jokeData) {
         // Build upvote button
         const upvoteBtn = document.createElement('button');
         upvoteBtn.type = 'button';
-        upvoteBtn.id = `upvote-${joke.id}`;
+        upvoteBtn.id = `joke-${joke.id}`;
         upvoteBtn.className = 'btn btn-outline-primary';
         upvoteBtn.textContent = 'upvote ↑';
-        upvoteBtn.addEventListener('click', e => upvoteHandler(e));
 
         // Build downvote button
         const downvoteBtn = document.createElement('button');
         downvoteBtn.type = 'button';
-        downvoteBtn.id = `downvote-${joke.id}`;
         downvoteBtn.className = 'btn btn-outline-danger';
         downvoteBtn.textContent = 'downvote ↓';
-        downvoteBtn.addEventListener('click', e => downvoteHandler(e));
 
         // Build button divider
         const divBtnDivider = document.createElement('div');
@@ -167,14 +164,7 @@ function refreshJokesHandler() {
 }
 
 function upvoteHandler(e) {
-    console.log('upvote');
-    console.log(e.target.id);
 
-}
-
-function downvoteHandler(e) {
-    console.log('downvote');
-    console.log(e.target.id);
 
 }
 
