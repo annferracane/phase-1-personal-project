@@ -202,7 +202,6 @@ function downvoteHandler(e) {
     voteDiv.textContent = `Votes: ${newVote}`;
 }
 
-// General PATCH or POST fetch
 function generalFetch(url, mthd, configObj, handler) {
     fetch(url, {
         method: mthd,
@@ -234,7 +233,7 @@ function searchJokeHandler(e) {
     .catch(error => console.log(`Error with local db: ${error}`));
 }
 
-// Function takes array full of jokes in db.json and search string and returns jokes that only inlude search string
+// Searches 
 function searchJokes(jokeData, searchStr) {
     const searchedArray = [];
     jokeData.forEach(joke => {

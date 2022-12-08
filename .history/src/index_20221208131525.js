@@ -202,7 +202,6 @@ function downvoteHandler(e) {
     voteDiv.textContent = `Votes: ${newVote}`;
 }
 
-// General PATCH or POST fetch
 function generalFetch(url, mthd, configObj, handler) {
     fetch(url, {
         method: mthd,
