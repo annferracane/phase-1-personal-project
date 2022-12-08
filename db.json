@@ -2,92 +2,92 @@
   "jokes": [
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 35,
+      "type": "twopart",
+      "idJokeAPI": 56,
       "language": "en",
       "votes": 0,
-      "joke": "There are only 10 kinds of people in this world: those who know binary and those who don't.",
+      "joke": "<b>Setup:</b> What is a dying programmer's last program?<br><b>Delivery:</b> Goodbye, world!",
       "id": 1
     },
     {
       "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 265,
+      "type": "single",
+      "idJokeAPI": 4,
       "language": "en",
       "votes": 0,
-      "joke": "<b>Setup:</b> Why did the database administrator leave his wife?<br><b>Delivery:</b> She had one-to-many relationships.",
+      "joke": "Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says \"Do you get the reference?\" But Java didn't.",
       "id": 2
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 259,
+      "type": "twopart",
+      "idJokeAPI": 10,
       "language": "en",
       "votes": 0,
-      "joke": "UDP is better in the COVID era since it avoids unnecessary handshakes.",
+      "joke": "<b>Setup:</b> Hey, wanna hear a joke?<br><b>Delivery:</b> Parsing HTML with regex.",
       "id": 3
     },
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 264,
+      "idJokeAPI": 17,
       "language": "en",
       "votes": 0,
-      "joke": "<b>Setup:</b> Why are Assembly programmers always soaking wet?<br><b>Delivery:</b> They work below C-level.",
+      "joke": "<b>Setup:</b> How can you tell an extroverted programmer?<br><b>Delivery:</b> He looks at YOUR shoes when he's talking.",
       "id": 4
     },
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 50,
+      "idJokeAPI": 7,
       "language": "en",
       "votes": 0,
-      "joke": "<b>Setup:</b> Why do programmers wear glasses?<br><b>Delivery:</b> Because they need to C#",
+      "joke": "<b>Setup:</b> Why is 6 afraid of 7 in hexadecimal Canada?<br><b>Delivery:</b> Because 7 8 9 A?",
       "id": 5
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 184,
+      "type": "twopart",
+      "idJokeAPI": 53,
       "language": "en",
       "votes": 0,
-      "joke": "Being a self-taught developer is almost the same as being a cut neck chicken because you have no sense of direction in the beginning.",
+      "joke": "<b>Setup:</b> Why do Java programmers hate communism?<br><b>Delivery:</b> They don't want to live in a classless society.",
       "id": 6
     },
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 127,
+      "idJokeAPI": 52,
       "language": "en",
       "votes": 0,
-      "joke": "<b>Setup:</b> How do you generate a random string?<br><b>Delivery:</b> Put a Windows user in front of Vim and tell them to exit.",
+      "joke": "<b>Setup:</b> So what's a set of predefined steps the government might take to preserve the environment?<br><b>Delivery:</b> An Al-Gore-ithm.",
       "id": 7
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 123,
+      "type": "twopart",
+      "idJokeAPI": 32,
       "language": "en",
       "votes": 0,
-      "joke": "The six stages of debugging:\n1. That can't happen.\n2. That doesn't happen on my machine.\n3. That shouldn't happen.\n4. Why does that happen?\n5. Oh, I see.\n6. How did that ever work?",
+      "joke": "<b>Setup:</b> What is the best prefix for global variables?<br><b>Delivery:</b> //",
       "id": 8
     },
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 15,
+      "idJokeAPI": 49,
       "language": "en",
       "votes": 0,
-      "joke": "<b>Setup:</b> Why did the Python programmer not respond to the foreign mails he got?<br><b>Delivery:</b> Because his interpreter was busy collecting garbage.",
+      "joke": "<b>Setup:</b> .NET developers are picky when it comes to food.<br><b>Delivery:</b> They only like chicken NuGet.",
       "id": 9
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 28,
+      "type": "twopart",
+      "idJokeAPI": 31,
       "language": "en",
       "votes": 0,
-      "joke": "Two C strings walk into a bar.\nThe bartender asks \"What can I get ya?\"\nThe first string says \"I'll have a gin and tonic.\"\nThe second string thinks for a minute, then says \"I'll take a tequila sunriseJF()#$JF(#)$(@J#()$@#())!*FNIN!OBN134ufh1ui34hf9813f8h8384h981h3984h5F!##@\"\nThe first string apologizes, \"You'll have to excuse my friend, he's not null-terminated.\"",
+      "joke": "<b>Setup:</b> Why did the JavaScript heap close shop?<br><b>Delivery:</b> It ran out of memory.",
       "id": 10
     }
   ]

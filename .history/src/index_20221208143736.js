@@ -38,10 +38,7 @@ function createJokeToDisplay(jokeData) {
     // Specify which div on index.html to later append joke div
     const jokeCardsDiv = document.querySelector('#joke-cards-div');
 
-    // Set html conent to custom text if local db.json has no jokes
-    if(jokeData.length == 0) {
-        jokeCardsDiv.innerHTML = `<div class="px-4 py-5 my-5 text-center"><h3>No jokes to see here. That's not too funny. Add some jokes!</div>`;
-    }
+    if(jokeData.length)
 
     jokeData.forEach(joke => {
         // Build div that holds joke content and voting button container
@@ -168,7 +165,7 @@ function addJokesHandler() {
 function postJokesToDatabase(newJokesFromAPI, displayCallback) {
     // Loop through joke array and post to local db
     newJokesFromAPI.forEach(newJoke => {
-        //console.log(newJoke);
+        console.log(newJoke);
         fetch(localUrlBase, {
             method: 'POST',
             headers: {

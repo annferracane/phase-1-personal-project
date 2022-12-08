@@ -1,14 +1,13 @@
-// DOM Global Variables
+// DOM Global Variables & Event Listeners
 const localUrlBase = 'http://localhost:3000/jokes';
 const jokeCardsDiv = document.querySelector('#joke-cards-div');
 const reorderJokesBtn = document.querySelector('#reorder-jokes-btn');
 const deleteJokesBtn = document.querySelector('#delete-jokes-btn');
-const addJokesBtn = document.querySelector('#add-jokes-btn');
+const refreshJokesBtn = document.querySelector('#refresh-jokes-btn');
 const searchForm = document.querySelector('#joke-search');
 
-// Event listeners
 deleteJokesBtn.addEventListener('click', deleteJokesHandler);
-addJokesBtn.addEventListener('click', addJokesHandler);
+refreshJokesBtn.addEventListener('click', refreshJokesHandler);
 searchForm.addEventListener('submit', e => searchJokeHandler(e));
 reorderJokesBtn.addEventListener('click', sortJokesBtnHandler);
 
@@ -38,11 +37,6 @@ function createJokeToDisplay(jokeData) {
     // Specify which div on index.html to later append joke div
     const jokeCardsDiv = document.querySelector('#joke-cards-div');
 
-    // Set html conent to custom text if local db.json has no jokes
-    if(jokeData.length == 0) {
-        jokeCardsDiv.innerHTML = `<div class="px-4 py-5 my-5 text-center"><h3>No jokes to see here. That's not too funny. Add some jokes!</div>`;
-    }
-
     jokeData.forEach(joke => {
         // Build div that holds joke content and voting button container
         const divJoke = document.createElement('div');
@@ -70,7 +64,7 @@ function createJokeToDisplay(jokeData) {
         upvoteBtn.id = `upvote-${joke.id}`;
         upvoteBtn.className = 'btn btn-outline-primary';
         upvoteBtn.textContent = 'upvote ↑';
-        upvoteBtn.addEventListener('click', e => voteHandler(e));
+        upvoteBtn.addEventListener('click', e => upvoteHandler(e));
 
         // Build downvote button
         const downvoteBtn = document.createElement('button');
@@ -78,7 +72,7 @@ function createJokeToDisplay(jokeData) {
         downvoteBtn.id = `downvote-${joke.id}`;
         downvoteBtn.className = 'btn btn-outline-danger';
         downvoteBtn.textContent = 'downvote ↓';
-        downvoteBtn.addEventListener('click', e => voteHandler(e));
+        downvoteBtn.addEventListener('click', e => downvoteHandler(e));
 
         // Build button dividers
         const divBtnDivider = document.createElement('div');
@@ -102,7 +96,7 @@ function createJokeToDisplay(jokeData) {
 
 function deleteJokesHandler() {
     // Delete jokes from local db and dom, fetch new jokes, display jokes
-    jokeCardsDiv.innerHTML = `<div class="px-4 py-5 my-5 text-center"><h3>No jokes to see here. That's not too funny. Add some jokes!</div>`;
+    jokeCardsDiv.innerHTML = '';
     fetch(localUrlBase)
     .then(resp => resp.json())
     .then(jokeData => {
@@ -120,12 +114,11 @@ function deleteJokesHandler() {
             .catch(error => console.log(`Error with delete fetch: ${error}`));
         })
     })
-    .catch(error => console.log(`Error with local db in delete handler: ${error}`));
+    .catch(error => console.log(`Error with local db in refresh handler: ${error}`));
 }
 
-// Function calls external API, asseses data returned and calls callback functions to post to db.json and later redisplay
 function fetchJokes(postCallback, displayCallback) {
-    // Call fetch to Joke API to fetch jokes
+    // Call fetch to Joke API to refresh
     fetch('https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&amount=10')
     .then(resp => resp.json())
     .then(jokeAPIData => {
@@ -150,25 +143,22 @@ function fetchJokes(postCallback, displayCallback) {
                 joke: joke
             } 
 
-            //Add joke to array
+            //Add joke to global array
             newJokesFromAPI.push(jokeConfigObj);
             
         })
+        console.log(newJokesFromAPI.length);
         return newJokesFromAPI;
     })
     .then(newJokesFromAPI => postCallback(newJokesFromAPI, displayCallback))
     .catch(error => console.log(`Error in fetchJokes(): ${error}`));
 }
 
-// Add jokes handler which calls fetchJokes function and passes two functions as callback
-function addJokesHandler() {
-    fetchJokes(postJokesToDatabase, displayJokes);
-}
 
 function postJokesToDatabase(newJokesFromAPI, displayCallback) {
     // Loop through joke array and post to local db
     newJokesFromAPI.forEach(newJoke => {
-        //console.log(newJoke);
+        console.log(newJoke);
         fetch(localUrlBase, {
             method: 'POST',
             headers: {
@@ -184,27 +174,19 @@ function postJokesToDatabase(newJokesFromAPI, displayCallback) {
     displayCallback();
 }
 
-// Event handler for upvote and downvote buttons
-function voteHandler(e) {
-    let jokeID;
-    let voteDiv;
-    let currentVote;
-    let newVote;
+function refreshJokesHandler() {
+    fetchJokes(postJokesToDatabase, displayJokes);
+}
 
-    if(e.target.id.includes('upvote')) {
-        jokeID = e.target.id.slice(7);
-        voteDiv = document.querySelector(`#votecount-${jokeID}`);
-        currentVote = parseInt(voteDiv.textContent.slice(7));
-        newVote = currentVote + 1;
 
-    } else if (e.target.id.includes('downvote')) {
-        jokeID = e.target.id.slice(9);
-        voteDiv = document.querySelector(`#votecount-${jokeID}`);
-        currentVote = parseInt(voteDiv.textContent.slice(7));
-        newVote = currentVote - 1;
-
-    }
+function voteHandler(e)
+function upvoteHandler(e) {
+    const jokeID = e.target.id.slice(7);
     const fetchURL = `${localUrlBase}/${jokeID}`;
+    const voteDiv = document.querySelector(`#votecount-${jokeID}`);
+    const currentVote = parseInt(voteDiv.textContent.slice(7));
+    const newVote = currentVote + 1;
+
     const configObj = {
         votes: newVote
     }
@@ -212,6 +194,20 @@ function voteHandler(e) {
     voteDiv.textContent = `Votes: ${newVote}`;
 }
 
+function downvoteHandler(e) {
+    const jokeID = e.target.id.slice(9);
+    const fetchURL = `${localUrlBase}/${jokeID}`;
+    const voteDiv = document.querySelector(`#votecount-${jokeID}`);
+
+    const currentVote = parseInt(voteDiv.textContent.slice(7));
+    const newVote = currentVote - 1;
+
+    const configObj = {
+        votes: newVote
+    }
+    generalFetch(fetchURL,'PATCH', configObj,'downvoteHandler');
+    voteDiv.textContent = `Votes: ${newVote}`;
+}
 
 // Search handler for search form in DOM
 function searchJokeHandler(e) {
