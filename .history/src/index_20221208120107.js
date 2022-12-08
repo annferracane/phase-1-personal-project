@@ -215,7 +215,7 @@ function generalFetch(url, mthd, configObj, handler) {
 }
 
 function searchJokeHandler() {
-    console.log(searchInput.value);
+    console.log("We are searching!");
 }
 
 
