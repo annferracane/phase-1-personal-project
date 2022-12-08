@@ -219,22 +219,18 @@ function searchJokeHandler(e) {
     const searchStr = e.target.querySelector('#joke-search-input').value;
     console.log(searchStr);
 
-    jokeCardsDiv.innerHTML = '';
+    //jokeCardsDiv.innerHTML = '';
 
+    /*
     fetch(localUrlBase)
     .then(resp => resp.json())
-    .then(jokeData => searchJokes(jokeData, searchStr))
+    .then(jokeData => searchJokes(jokeData))
     .then(searchedJokeData => createJokeToDisplay(searchedJokeData))
     .catch(error => console.log(`Error with local db: ${error}`));
+    */
 }
 
-function searchJokes(jokeData, searchStr) {
-    console.log("searchJokes");
-    console.log(searchStr.toLowerCase());
-    jokeData.forEach(joke => {
-        console.log(joke.joke.toLowerCase());
-    });
-
+function searchJokes(jokeData) {
     return jokeData;
 }
 

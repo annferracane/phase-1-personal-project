@@ -223,18 +223,13 @@ function searchJokeHandler(e) {
 
     fetch(localUrlBase)
     .then(resp => resp.json())
-    .then(jokeData => searchJokes(jokeData, searchStr))
+    .then(jokeData => searchJokes(jokeData))
     .then(searchedJokeData => createJokeToDisplay(searchedJokeData))
     .catch(error => console.log(`Error with local db: ${error}`));
 }
 
-function searchJokes(jokeData, searchStr) {
-    console.log("searchJokes");
-    console.log(searchStr.toLowerCase());
-    jokeData.forEach(joke => {
-        console.log(joke.joke.toLowerCase());
-    });
-
+function searchJokes(jokeData) {
+    console.log("ran");
     return jokeData;
 }
 

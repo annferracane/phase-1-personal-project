@@ -228,9 +228,8 @@ function searchJokeHandler(e) {
     .catch(error => console.log(`Error with local db: ${error}`));
 }
 
-function searchJokes(jokeData, searchStr) {
+function searchJokes(jokeData) {
     console.log("searchJokes");
-    console.log(searchStr.toLowerCase());
     jokeData.forEach(joke => {
         console.log(joke.joke.toLowerCase());
     });

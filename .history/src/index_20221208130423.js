@@ -230,7 +230,6 @@ function searchJokeHandler(e) {
 
 function searchJokes(jokeData, searchStr) {
     console.log("searchJokes");
-    console.log(searchStr.toLowerCase());
     jokeData.forEach(joke => {
         console.log(joke.joke.toLowerCase());
     });
