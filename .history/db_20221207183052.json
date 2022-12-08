@@ -1,0 +1,84 @@
+{
+  "jokes": [
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 221,
+      "language": "en",
+      "joke": "Two SQL tables sit at the bar. A query approaches and asks \"Can I join you?\"",
+      "id": 1
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 57,
+      "language": "en",
+      "joke": "\"Can I tell you a TCP joke?\"\n\"Please tell me a TCP joke.\"\n\"OK, I'll tell you a TCP joke.\"",
+      "id": 2
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 24,
+      "language": "en",
+      "joke": "A byte walks into a bar looking miserable.\nThe bartender asks it: \"What's wrong buddy?\"\n\"Parity error.\" it replies. \n\"Ah that makes sense, I thought you looked a bit off.\"",
+      "id": 3
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 33,
+      "language": "en",
+      "joke": "Today I learned that changing random stuff until your program works is \"hacky\" and a \"bad coding practice\" but if you do it fast enough it's \"Machine Learning\" and pays 4x your current salary.",
+      "id": 4
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 211,
+      "language": "en",
+      "joke": "<b>Setup:</b> What are bits?<br><br><b>Delivery:</b> Tiny things left when you drop your computer down the stairs.",
+      "id": 5
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 23,
+      "language": "en",
+      "joke": "The glass is neither half-full nor half-empty, the glass is twice as big as it needs to be.",
+      "id": 6
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 44,
+      "language": "en",
+      "joke": "Have a great weekend!\nI hope your code behaves the same on Monday as it did on Friday.",
+      "id": 7
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 147,
+      "language": "en",
+      "joke": "<b>Setup:</b> How did you make your friend rage?<br><br><b>Delivery:</b> I implemented a greek question mark in his JavaScript code.",
+      "id": 8
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 193,
+      "language": "en",
+      "joke": "<b>Setup:</b> What is the most used language in programming?<br><br><b>Delivery:</b> Profanity.",
+      "id": 9
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 41,
+      "language": "en",
+      "joke": "Hey Girl,\nRoses are #ff0000,\nViolets are #0000ff,\nI use hex codes,\nBut I'd use RGB for you.",
+      "id": 10
+    }
+  ]
+}

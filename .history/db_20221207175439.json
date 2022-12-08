@@ -1,0 +1,84 @@
+{
+  "jokes": [
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 41,
+      "language": "en",
+      "joke": "Hey Girl,\nRoses are #ff0000,\nViolets are #0000ff,\nI use hex codes,\nBut I'd use RGB for you.",
+      "id": 1
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 4,
+      "language": "en",
+      "joke": "Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says \"Do you get the reference?\" But Java didn't.",
+      "id": 2
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 184,
+      "language": "en",
+      "joke": "Being a self-taught developer is almost the same as being a cut neck chicken because you have no sense of direction in the beginning.",
+      "id": 3
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 16,
+      "language": "en",
+      "joke": "<b>Setup:</b> Why did the programmer quit his job?<br><br><b>Delivery:</b> Because he didn't get arrays.",
+      "id": 4
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 221,
+      "language": "en",
+      "joke": "Two SQL tables sit at the bar. A query approaches and asks \"Can I join you?\"",
+      "id": 5
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 264,
+      "language": "en",
+      "joke": "<b>Setup:</b> Why are Assembly programmers always soaking wet?<br><br><b>Delivery:</b> They work below C-level.",
+      "id": 6
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 25,
+      "language": "en",
+      "joke": "ASCII silly question, get a silly ANSI.",
+      "id": 7
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 1,
+      "language": "en",
+      "joke": "<b>Setup:</b> How many programmers does it take to screw in a light bulb?<br><br><b>Delivery:</b> None. It's a hardware problem.",
+      "id": 8
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 33,
+      "language": "en",
+      "joke": "Today I learned that changing random stuff until your program works is \"hacky\" and a \"bad coding practice\" but if you do it fast enough it's \"Machine Learning\" and pays 4x your current salary.",
+      "id": 9
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 5,
+      "language": "en",
+      "joke": "A SQL statement walks into a bar and sees two tables.\nIt approaches, and asks \"may I join you?\"",
+      "id": 10
+    }
+  ]
+}

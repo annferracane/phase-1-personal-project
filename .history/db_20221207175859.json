@@ -1,0 +1,13 @@
+{
+  "jokes": [
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 5,
+      "language": "en",
+      "joke": "A SQL statement walks into a bar and sees two tables.\nIt approaches, and asks \"may I join you?\"",
+      "id": 10
+    },
+    
+  ]
+}
