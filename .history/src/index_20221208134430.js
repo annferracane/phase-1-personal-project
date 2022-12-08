@@ -250,12 +250,14 @@ function searchJokes(jokeData, searchStr) {
 }
 
 function jokeMouseHandler(e) {
+    //bg-light border p-3
     console.log(e.type);
     if(e.type == "mouseenter") {
-        e.target.className = 'bg-warning border p-3';
+
     } else if (e.type == "mouseleave") {
-        e.target.className = 'bg-light border p-3';
+        
     }
+    //console.log(e.target.className = 'bg-warning border p-3');
 }
 
 

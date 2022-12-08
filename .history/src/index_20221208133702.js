@@ -40,8 +40,7 @@ function createJokeToDisplay(jokeData) {
         const divJoke = document.createElement('div');
         divJoke.className = 'bg-light border p-3';
         divJoke.id = `joke-${joke.id}`;
-        divJoke.addEventListener('mouseenter', e => jokeMouseHandler(e));
-        divJoke.addEventListener('mouseleave', e => jokeMouseHandler(e));
+        divJoke.addEventListener('dblclick', e => jokeMouseoverHandler(e));
 
         // Build paragraph for joke content
         const jokeParagraph = document.createElement('p');
@@ -249,13 +248,10 @@ function searchJokes(jokeData, searchStr) {
     return searchedArray;
 }
 
-function jokeMouseHandler(e) {
-    console.log(e.type);
-    if(e.type == "mouseenter") {
-        e.target.className = 'bg-warning border p-3';
-    } else if (e.type == "mouseleave") {
-        e.target.className = 'bg-light border p-3';
-    }
+function jokeMouseoverHandler(e) {
+    //bg-light border p-3
+    console.log("Logging")
+;    console.log(e.target.className = 'bg-dark border p-3');
 }
 
 
