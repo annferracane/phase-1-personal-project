@@ -7,7 +7,6 @@ const searchInput = document.querySelector('#joke-search');
 
 deleteJokesBtn.addEventListener('click', deleteJokesHandler);
 refreshJokesBtn.addEventListener('click', refreshJokesHandler);
-searchInput.addEventListener('search', searchJokeHandler);
 
 // DOM Content Updates
 document.querySelector('#hero-header').textContent = 'Get ready for jokes.';
@@ -212,10 +211,6 @@ function generalFetch(url, mthd, configObj, handler) {
         body: JSON.stringify(configObj)
     })
     .catch(error => console.log(`Error in ${handler}(): ${error}`));
-}
-
-function searchJokeHandler() {
-    console.log("We are searching!");
 }
 
 

@@ -3,11 +3,10 @@ const localUrlBase = 'http://localhost:3000/jokes';
 const jokeCardsDiv = document.querySelector('#joke-cards-div');
 const deleteJokesBtn = document.querySelector('#delete-jokes-btn');
 const refreshJokesBtn = document.querySelector('#refresh-jokes-btn');
-const searchInput = document.querySelector('#joke-search');
+const searchInput = document.querySelector('#refresh-jokes-btn');
 
 deleteJokesBtn.addEventListener('click', deleteJokesHandler);
 refreshJokesBtn.addEventListener('click', refreshJokesHandler);
-searchInput.addEventListener('search', searchJokeHandler);
 
 // DOM Content Updates
 document.querySelector('#hero-header').textContent = 'Get ready for jokes.';
@@ -212,10 +211,6 @@ function generalFetch(url, mthd, configObj, handler) {
         body: JSON.stringify(configObj)
     })
     .catch(error => console.log(`Error in ${handler}(): ${error}`));
-}
-
-function searchJokeHandler() {
-    console.log("We are searching!");
 }
 
 

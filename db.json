@@ -2,66 +2,48 @@
   "jokes": [
     {
       "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 31,
+      "type": "single",
+      "idJokeAPI": 35,
       "language": "en",
       "votes": 0,
-      "joke": "<b>Setup:</b> Why did the JavaScript heap close shop?<br><b>Delivery:</b> It ran out of memory.",
+      "joke": "There are only 10 kinds of people in this world: those who know binary and those who don't.",
       "id": 1
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 38,
+      "type": "twopart",
+      "idJokeAPI": 265,
       "language": "en",
       "votes": 0,
-      "joke": "A man is smoking a cigarette and blowing smoke rings into the air. His girlfriend becomes irritated with the smoke and says \"Can't you see the warning on the cigarette pack? Smoking is hazardous to your health!\" to which the man replies, \"I am a programmer.  We don't worry about warnings; we only worry about errors.\"",
+      "joke": "<b>Setup:</b> Why did the database administrator leave his wife?<br><b>Delivery:</b> She had one-to-many relationships.",
       "id": 2
     },
     {
       "category": "Programming",
       "type": "single",
-      "idJokeAPI": 37,
+      "idJokeAPI": 259,
       "language": "en",
       "votes": 0,
-      "joke": "Programming is 10% science, 20% ingenuity, and 70% getting the ingenuity to work with the science.",
+      "joke": "UDP is better in the COVID era since it avoids unnecessary handshakes.",
       "id": 3
     },
     {
       "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 39,
+      "type": "twopart",
+      "idJokeAPI": 264,
       "language": "en",
       "votes": 0,
-      "joke": "The generation of random numbers is too important to be left to chance.",
+      "joke": "<b>Setup:</b> Why are Assembly programmers always soaking wet?<br><b>Delivery:</b> They work below C-level.",
       "id": 4
     },
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 266,
+      "idJokeAPI": 50,
       "language": "en",
       "votes": 0,
-      "joke": "<b>Setup:</b> How did the programmer die in the shower?<br><b>Delivery:</b> He read the shampoo bottle instructions: Lather. Rinse. Repeat.",
+      "joke": "<b>Setup:</b> Why do programmers wear glasses?<br><b>Delivery:</b> Because they need to C#",
       "id": 5
-    },
-    {
-      "category": "Programming",
-      "type": "single",
-      "idJokeAPI": 22,
-      "language": "en",
-      "votes": 0,
-      "joke": "If Bill Gates had a dime for every time Windows crashed ... Oh wait, he does.",
-      "id": 6
-    },
-    {
-      "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 54,
-      "language": "en",
-      "votes": 0,
-      "joke": "<b>Setup:</b> Hey baby I wish your name was asynchronous...<br><b>Delivery:</b> ... so you'd give me a callback.",
-      "id": 7
     },
     {
       "category": "Programming",
@@ -70,24 +52,42 @@
       "language": "en",
       "votes": 0,
       "joke": "Being a self-taught developer is almost the same as being a cut neck chicken because you have no sense of direction in the beginning.",
-      "id": 8
+      "id": 6
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 127,
+      "language": "en",
+      "votes": 0,
+      "joke": "<b>Setup:</b> How do you generate a random string?<br><b>Delivery:</b> Put a Windows user in front of Vim and tell them to exit.",
+      "id": 7
     },
     {
       "category": "Programming",
       "type": "single",
-      "idJokeAPI": 3,
+      "idJokeAPI": 123,
       "language": "en",
       "votes": 0,
-      "joke": "A programmer puts two glasses on his bedside table before going to sleep.\nA full one, in case he gets thirsty, and an empty one, in case he doesn't.",
+      "joke": "The six stages of debugging:\n1. That can't happen.\n2. That doesn't happen on my machine.\n3. That shouldn't happen.\n4. Why does that happen?\n5. Oh, I see.\n6. How did that ever work?",
+      "id": 8
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 15,
+      "language": "en",
+      "votes": 0,
+      "joke": "<b>Setup:</b> Why did the Python programmer not respond to the foreign mails he got?<br><b>Delivery:</b> Because his interpreter was busy collecting garbage.",
       "id": 9
     },
     {
       "category": "Programming",
       "type": "single",
-      "idJokeAPI": 221,
+      "idJokeAPI": 28,
       "language": "en",
       "votes": 0,
-      "joke": "Two SQL tables sit at the bar. A query approaches and asks \"Can I join you?\"",
+      "joke": "Two C strings walk into a bar.\nThe bartender asks \"What can I get ya?\"\nThe first string says \"I'll have a gin and tonic.\"\nThe second string thinks for a minute, then says \"I'll take a tequila sunriseJF()#$JF(#)$(@J#()$@#())!*FNIN!OBN134ufh1ui34hf9813f8h8384h981h3984h5F!##@\"\nThe first string apologizes, \"You'll have to excuse my friend, he's not null-terminated.\"",
       "id": 10
     }
   ]

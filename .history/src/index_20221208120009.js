@@ -214,10 +214,6 @@ function generalFetch(url, mthd, configObj, handler) {
     .catch(error => console.log(`Error in ${handler}(): ${error}`));
 }
 
-function searchJokeHandler() {
-    console.log("We are searching!");
-}
-
 
 
 

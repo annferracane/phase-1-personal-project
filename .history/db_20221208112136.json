@@ -1,0 +1,85 @@
+{
+  "jokes": [
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 7,
+      "language": "en",
+      "votes": 0,
+      "joke": "<b>Setup:</b> Why is 6 afraid of 7 in hexadecimal Canada?<br><b>Delivery:</b> Because 7 8 9 A?",
+      "id": 5
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 221,
+      "language": "en",
+      "votes": 0,
+      "joke": "Two SQL tables sit at the bar. A query approaches and asks \"Can I join you?\"",
+      "id": 6
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 292,
+      "language": "en",
+      "votes": 0,
+      "joke": "<b>Setup:</b> Why was the JavaScript developer sad?<br><b>Delivery:</b> Because they didn't Node how to Express themself!",
+      "id": 8
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 17,
+      "language": "en",
+      "votes": 0,
+      "joke": "<b>Setup:</b> How can you tell an extroverted programmer?<br><b>Delivery:</b> He looks at YOUR shoes when he's talking.",
+      "id": 9
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 232,
+      "language": "en",
+      "votes": 0,
+      "joke": "<b>Setup:</b> Why do programmers prefer using the dark mode?<br><b>Delivery:</b> Because light attracts bugs.",
+      "id": 10
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 7,
+      "language": "en",
+      "votes": 0,
+      "joke": "<b>Setup:</b> Why is 6 afraid of 7 in hexadecimal Canada?<br><b>Delivery:</b> Because 7 8 9 A?",
+      "id": 11
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 265,
+      "language": "en",
+      "votes": 0,
+      "joke": "<b>Setup:</b> Why did the database administrator leave his wife?<br><b>Delivery:</b> She had one-to-many relationships.",
+      "id": 12
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 48,
+      "language": "en",
+      "votes": 0,
+      "joke": "<b>Setup:</b> Why did the functional programmer get thrown out of school?<br><b>Delivery:</b> Because he refused to take classes.",
+      "id": 13
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 319,
+      "language": "en",
+      "votes": 0,
+      "joke": "I'd tell you a joke about NAT but I would have to translate.",
+      "id": 14
+    }
+  ]
+}

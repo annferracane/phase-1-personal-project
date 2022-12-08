@@ -3,11 +3,9 @@ const localUrlBase = 'http://localhost:3000/jokes';
 const jokeCardsDiv = document.querySelector('#joke-cards-div');
 const deleteJokesBtn = document.querySelector('#delete-jokes-btn');
 const refreshJokesBtn = document.querySelector('#refresh-jokes-btn');
-const searchInput = document.querySelector('#joke-search');
 
 deleteJokesBtn.addEventListener('click', deleteJokesHandler);
 refreshJokesBtn.addEventListener('click', refreshJokesHandler);
-searchInput.addEventListener('search', searchJokeHandler);
 
 // DOM Content Updates
 document.querySelector('#hero-header').textContent = 'Get ready for jokes.';
@@ -51,9 +49,8 @@ function createJokeToDisplay(jokeData) {
 
         // Build vote count div
         const voteCountDiv = document.createElement('div');
-        voteCountDiv.id = `votecount-${joke.id}`;
         voteCountDiv.textContent = `Votes: ${joke.votes}`
-        
+
         // Build upvote button
         const upvoteBtn = document.createElement('button');
         upvoteBtn.type = 'button';
@@ -175,31 +172,27 @@ function refreshJokesHandler() {
 }
 
 function upvoteHandler(e) {
+    console.log('upvote');
+    console.log(e.target.id);
     const jokeID = e.target.id.slice(7);
+
     const fetchURL = `${localUrlBase}/${jokeID}`;
-    const voteDiv = document.querySelector(`#votecount-${jokeID}`);
-    const currentVote = parseInt(voteDiv.textContent.slice(7));
-    const newVote = currentVote + 1;
+    console.log(fetchURL);
+
+    const currentVote = document.querySelector(`#e.target.id`);
+    console.log(currentVote);
 
     const configObj = {
         votes: newVote
     }
-    generalFetch(fetchURL,'PATCH', configObj,'upvoteHandler');
-    voteDiv.textContent = `Votes: ${newVote}`;
+    //generalFetch(fetchURL,'PATCH', configObj,'upvoteHandler');
+
 }
 
 function downvoteHandler(e) {
-    const jokeID = e.target.id.slice(9);
-    const fetchURL = `${localUrlBase}/${jokeID}`;
-    const voteDiv = document.querySelector(`#votecount-${jokeID}`);
-    const currentVote = parseInt(voteDiv.textContent.slice(7));
-    const newVote = currentVote - 1;
+    console.log('downvote');
+    console.log(e.target.id);
 
-    const configObj = {
-        votes: newVote
-    }
-    generalFetch(fetchURL,'PATCH', configObj,'downvoteHandler');
-    voteDiv.textContent = `Votes: ${newVote}`;
 }
 
 function generalFetch(url, mthd, configObj, handler) {
@@ -212,10 +205,6 @@ function generalFetch(url, mthd, configObj, handler) {
         body: JSON.stringify(configObj)
     })
     .catch(error => console.log(`Error in ${handler}(): ${error}`));
-}
-
-function searchJokeHandler() {
-    console.log("We are searching!");
 }
 
 
