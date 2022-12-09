@@ -6,6 +6,8 @@ const deleteJokesBtn = document.querySelector('#delete-jokes-btn');
 const addJokesBtn = document.querySelector('#add-jokes-btn');
 const searchForm = document.querySelector('#joke-search');
 
+const 
+
 // Event listeners
 deleteJokesBtn.addEventListener('click', deleteJokesHandler);
 addJokesBtn.addEventListener('click', addJokesHandler);
@@ -168,7 +170,7 @@ function addJokesHandler() {
 function postJokesToDatabase(newJokesFromAPI, displayCallback) {
     // Loop through joke array and post to local db
     newJokesFromAPI.forEach(newJoke => {
-        console.log(newJoke);
+        //console.log(newJoke);
         fetch(localUrlBase, {
             method: 'POST',
             headers: {

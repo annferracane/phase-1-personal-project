@@ -6,6 +6,8 @@ const deleteJokesBtn = document.querySelector('#delete-jokes-btn');
 const addJokesBtn = document.querySelector('#add-jokes-btn');
 const searchForm = document.querySelector('#joke-search');
 
+const jokeArray = [];
+
 // Event listeners
 deleteJokesBtn.addEventListener('click', deleteJokesHandler);
 addJokesBtn.addEventListener('click', addJokesHandler);
@@ -29,12 +31,16 @@ function displayJokes() {
     jokeCardsDiv.innerHTML = '';
     fetch(localUrlBase)
     .then(resp => resp.json())
-    .then(jokeData => createJokeToDisplay(jokeData))
+    .then(jokeData => {
+        jokeData.forEach(joke => jokeArray.push(joke));
+        return jokeArray;
+    })
+    .then(jokes => createJokeToDisplay(jokes))
     .catch(error => console.log(`Error with local db: ${error}`));
 }
 
 // Construct joke and append to DOM
-function createJokeToDisplay(jokeData) {
+function createJokeToDisplay(jokes) {
     // Specify which div on index.html to later append joke div
     const jokeCardsDiv = document.querySelector('#joke-cards-div');
 

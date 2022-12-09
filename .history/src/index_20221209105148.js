@@ -6,6 +6,8 @@ const deleteJokesBtn = document.querySelector('#delete-jokes-btn');
 const addJokesBtn = document.querySelector('#add-jokes-btn');
 const searchForm = document.querySelector('#joke-search');
 
+let jokeArray = [];
+
 // Event listeners
 deleteJokesBtn.addEventListener('click', deleteJokesHandler);
 addJokesBtn.addEventListener('click', addJokesHandler);
@@ -29,21 +31,25 @@ function displayJokes() {
     jokeCardsDiv.innerHTML = '';
     fetch(localUrlBase)
     .then(resp => resp.json())
-    .then(jokeData => createJokeToDisplay(jokeData))
+    .then(jokeData => {
+        jokeData.forEach(joke => jokeArray.push(joke));
+        return jokeArray;
+    })
+    .then(jokes => createJokeToDisplay(jokes))
     .catch(error => console.log(`Error with local db: ${error}`));
 }
 
 // Construct joke and append to DOM
-function createJokeToDisplay(jokeData) {
+function createJokeToDisplay(jokes) {
     // Specify which div on index.html to later append joke div
     const jokeCardsDiv = document.querySelector('#joke-cards-div');
 
     // Set html conent to custom text if local db.json has no jokes
-    if(jokeData.length == 0) {
+    if(jokes.length == 0) {
         jokeCardsDiv.innerHTML = `<div class="px-4 py-5 my-5 text-center"><h3>No jokes to see here. That's not too funny. Add some jokes!</div>`;
     }
 
-    jokeData.forEach(joke => {
+    jokes.forEach(joke => {
         // Build div that holds joke content and voting button container
         const divJoke = document.createElement('div');
         divJoke.className = 'bg-light border p-3';
@@ -103,24 +109,22 @@ function createJokeToDisplay(jokeData) {
 function deleteJokesHandler() {
     // Delete jokes from local db and dom, fetch new jokes, display jokes
     jokeCardsDiv.innerHTML = `<div class="px-4 py-5 my-5 text-center"><h3>No jokes to see here. That's not too funny. Add some jokes!</div>`;
-    fetch(localUrlBase)
-    .then(resp => resp.json())
-    .then(jokeData => {
-        jokeData.forEach(joke => {
-            // Build fetch url for delete
-            const fetchURL = `${localUrlBase}/${joke.id}`;
-            // Delete from db.json
-            fetch(fetchURL, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            })
-            .then(resp => resp.json())
-            .catch(error => console.log(`Error with delete fetch: ${error}`));
+    
+    jokeArray.forEach(joke => {
+        // Build fetch url for delete
+        const fetchURL = `${localUrlBase}/${joke.id}`;
+        // Delete from db.json
+        fetch(fetchURL, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
+        .then(resp => resp.json())
+        .catch(error => console.log(`Error with delete fetch: ${error}`));
     })
-    .catch(error => console.log(`Error with local db in delete handler: ${error}`));
+
+    jokeArray = [];
 }
 
 // Function calls external API, asseses data returned and calls callback functions to post to db.json and later redisplay
@@ -128,6 +132,7 @@ function fetchJokes(postCallback, displayCallback) {
     // Call fetch to Joke API to fetch jokes
     fetch('https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&amount=10')
     .then(resp => resp.json())
+    .then()
     .then(jokeAPIData => {
         const newJokesFromAPI = [];
         jokeAPIData.jokes.forEach(jokeAPI => {

@@ -3,11 +3,56 @@
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 56,
+      "idJokeAPI": 16,
       "language": "en",
-      "votes": 0,
-      "joke": "<b>Setup:</b> What is a dying programmer's last program?<br><b>Delivery:</b> Goodbye, world!",
+      "votes": 4,
+      "joke": "<b>Setup:</b> Why did the programmer quit his job?<br><b>Delivery:</b> Because he didn't get arrays.",
       "id": 1
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 11,
+      "language": "en",
+      "votes": 2,
+      "joke": "<b>Setup:</b> Why do programmers confuse Halloween and Christmas?<br><b>Delivery:</b> Because Oct 31 = Dec 25",
+      "id": 2
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 319,
+      "language": "en",
+      "votes": 1,
+      "joke": "I'd tell you a joke about NAT but I would have to translate.",
+      "id": 3
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 266,
+      "language": "en",
+      "votes": 6,
+      "joke": "<b>Setup:</b> How did the programmer die in the shower?<br><b>Delivery:</b> He read the shampoo bottle instructions: Lather. Rinse. Repeat.",
+      "id": 4
+    },
+    {
+      "category": "Programming",
+      "type": "twopart",
+      "idJokeAPI": 48,
+      "language": "en",
+      "votes": -2,
+      "joke": "<b>Setup:</b> Why did the functional programmer get thrown out of school?<br><b>Delivery:</b> Because he refused to take classes.",
+      "id": 5
+    },
+    {
+      "category": "Programming",
+      "type": "single",
+      "idJokeAPI": 38,
+      "language": "en",
+      "votes": -3,
+      "joke": "A man is smoking a cigarette and blowing smoke rings into the air. His girlfriend becomes irritated with the smoke and says \"Can't you see the warning on the cigarette pack? Smoking is hazardous to your health!\" to which the man replies, \"I am a programmer.  We don't worry about warnings; we only worry about errors.\"",
+      "id": 6
     },
     {
       "category": "Programming",
@@ -16,78 +61,33 @@
       "language": "en",
       "votes": 0,
       "joke": "Java and C were telling jokes. It was C's turn, so he writes something on the wall, points to it and says \"Do you get the reference?\" But Java didn't.",
-      "id": 2
-    },
-    {
-      "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 10,
-      "language": "en",
-      "votes": 0,
-      "joke": "<b>Setup:</b> Hey, wanna hear a joke?<br><b>Delivery:</b> Parsing HTML with regex.",
-      "id": 3
-    },
-    {
-      "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 17,
-      "language": "en",
-      "votes": 0,
-      "joke": "<b>Setup:</b> How can you tell an extroverted programmer?<br><b>Delivery:</b> He looks at YOUR shoes when he's talking.",
-      "id": 4
-    },
-    {
-      "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 7,
-      "language": "en",
-      "votes": 0,
-      "joke": "<b>Setup:</b> Why is 6 afraid of 7 in hexadecimal Canada?<br><b>Delivery:</b> Because 7 8 9 A?",
-      "id": 5
-    },
-    {
-      "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 53,
-      "language": "en",
-      "votes": 0,
-      "joke": "<b>Setup:</b> Why do Java programmers hate communism?<br><b>Delivery:</b> They don't want to live in a classless society.",
-      "id": 6
-    },
-    {
-      "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 52,
-      "language": "en",
-      "votes": 0,
-      "joke": "<b>Setup:</b> So what's a set of predefined steps the government might take to preserve the environment?<br><b>Delivery:</b> An Al-Gore-ithm.",
       "id": 7
     },
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 32,
+      "idJokeAPI": 193,
       "language": "en",
-      "votes": 0,
-      "joke": "<b>Setup:</b> What is the best prefix for global variables?<br><b>Delivery:</b> //",
+      "votes": 5,
+      "joke": "<b>Setup:</b> What is the most used language in programming?<br><b>Delivery:</b> Profanity.",
       "id": 8
     },
     {
       "category": "Programming",
       "type": "twopart",
-      "idJokeAPI": 49,
+      "idJokeAPI": 46,
       "language": "en",
-      "votes": 0,
-      "joke": "<b>Setup:</b> .NET developers are picky when it comes to food.<br><b>Delivery:</b> They only like chicken NuGet.",
+      "votes": -8,
+      "joke": "<b>Setup:</b> What's the object-oriented way to become wealthy?<br><b>Delivery:</b> Inheritance.",
       "id": 9
     },
     {
       "category": "Programming",
-      "type": "twopart",
-      "idJokeAPI": 31,
+      "type": "single",
+      "idJokeAPI": 36,
       "language": "en",
       "votes": 0,
-      "joke": "<b>Setup:</b> Why did the JavaScript heap close shop?<br><b>Delivery:</b> It ran out of memory.",
+      "joke": "\"Knock, knock.\"\n\"Who's there?\"\n\n[very long pause]\n\n\"Java.\"",
       "id": 10
     }
   ]
